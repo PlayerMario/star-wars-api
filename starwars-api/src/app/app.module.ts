@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortadaComponent } from './components/portada/portada.component';
 import { PeopleComponent } from './components/people/people.component';
+import { StarshipsComponent } from './components/starships/starships.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PortadaComponent,
-    PeopleComponent
+    PeopleComponent,
+    StarshipsComponent
   ],
   imports: [
     BrowserModule,
