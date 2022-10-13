@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortadaComponent } from './components/portada/portada.component';
+import { PeopleComponent } from './components/people/people.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortadaComponent
+    PortadaComponent,
+    PeopleComponent
   ],
   imports: [
     BrowserModule,
