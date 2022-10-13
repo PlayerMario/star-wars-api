@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmListComponent } from './components/film-list/film-list.component';
 import { PortadaComponent } from './components/portada/portada.component';
 import { PeopleComponent } from './components/people/people.component';
+import { StarshipsComponent } from './components/starships/starships.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PeopleComponent } from './components/people/people.component';
     AppComponent,
     FilmListComponent,
     PortadaComponent,
-    PeopleComponent
+    PeopleComponent,
+    StarshipsComponent
   ],
   imports: [
     BrowserModule,

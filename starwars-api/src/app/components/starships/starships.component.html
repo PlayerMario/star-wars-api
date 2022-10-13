@@ -1,0 +1,17 @@
+<button *ngFor="let item of counter(); let i = index" mat-raised-button (click)="cambiarPagina(i+1)">{{i+1}}</button>
+
+<br />
+
+<div *ngFor="let nave of listadoNaves">
+    <mat-card class="example-card">
+
+        <img mat-card-image [src]="mostrarImg(nave)"
+            onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
+            alt="Imagen de nave no encontrada">
+
+        <mat-card-content>
+            <h3>{{nave.name}}</h3>
+            <p>Modelo: {{nave.model}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
