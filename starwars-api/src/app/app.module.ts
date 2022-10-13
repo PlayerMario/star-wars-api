@@ -11,6 +11,7 @@ import { PortadaComponent } from './components/portada/portada.component';
 import { PeopleComponent } from './components/people/people.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { PagenotfoundComponent } from './pnf/pagenotfound/pagenotfound.component';
+import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PagenotfoundComponent } from './pnf/pagenotfound/pagenotfound.component
     PortadaComponent,
     PeopleComponent,
     StarshipsComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    VehiclesComponent
   ],
   imports: [
     BrowserModule,
