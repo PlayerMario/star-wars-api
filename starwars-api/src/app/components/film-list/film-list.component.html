@@ -1,1 +1,16 @@
+<button *ngFor="let item of counter(); let i = index" mat-raised-button (click)="cambiarPagina(i+1)">{{i+1}}</button>
 
+<br />
+
+<div *ngFor="let film of filmList">
+    <mat-card class="example-card">
+
+        <img mat-card-image [src]="mostrarImg(film)" width="30px" alt="Foto Película StarWars">
+
+        <mat-card-content>
+            <h3>{{film.title}}</h3>
+            <p><strong>Intro</strong></p>
+            <p>{{film.opening_crawl}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

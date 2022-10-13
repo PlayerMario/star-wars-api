@@ -12,6 +12,10 @@ export class FilmService {
   constructor(private http: HttpClient) { }
 
   public getFilms(): Observable<FilmsResponse> {
-    return this.http.get<FilmsResponse>(`${environment.apiBaseUrl}/films/`);
+    return this.http.get<FilmsResponse>(`${environment.API_BASE_URL}/films/`);
+  }
+
+  public getFilmList(page: number): Observable<FilmsResponse> {
+    return this.http.get<FilmsResponse>(`${environment.API_BASE_URL}/films/?page=${page}`);
   }
 }
