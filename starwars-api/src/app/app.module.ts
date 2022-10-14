@@ -10,8 +10,8 @@ import { FilmListComponent } from './components/film/film-list.component';
 import { PortadaComponent } from './components/portada/portada.component';
 import { PeopleComponent } from './components/people/people.component';
 import { StarshipsComponent } from './components/starships/starships.component';
-import { PagenotfoundComponent } from './pnf/pagenotfound/pagenotfound.component';
-import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { VehiclesComponent } from './components/vehicles/vehicles.component';
 
 
 @NgModule({

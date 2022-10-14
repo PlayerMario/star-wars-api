@@ -10,19 +10,3 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: black;
 }
-
-div {
-    width: 100%;
-    margin: 50px auto;
-    text-align: center;
-}
-
-p {
-    color: yellow;
-    font-weight: bold;
-    margin-top: -50px;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 1.5em;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
