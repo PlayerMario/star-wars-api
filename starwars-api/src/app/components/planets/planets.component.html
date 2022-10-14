@@ -7,7 +7,7 @@
 
         <img mat-card-image [src]="mostrarImg(planet)"
             onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
-            alt="Foto Planeta StarWars" (click)=mostrarInformacion(planet)>
+            alt="Foto Planeta StarWars" (click)="mostrarInformacion(planet)">
         <mat-card-content>
             <h3>{{planet.name}}</h3>
         </mat-card-content>

@@ -10,6 +10,11 @@
         <li>Color de piel: {{peopleData.peopleInfo.skin_color}}.</li>
         <li>Color de ojos: {{peopleData.peopleInfo.eye_color}}.</li>
         <li>Origen: {{peopleData.peopleInfo.homeworld}}.</li>
+
+        <p><strong>Aparición en películas</strong></p>
+        <ul *ngFor="let pelicula of peopleData.peopleInfo.films">
+            <li>{{mostrarNombrePeliculas(pelicula)}}</li>
+        </ul>
     </ul>
     <div mat-dialog-actions>
         <button mat-button mat-dialog-close>Cerrar</button>
