@@ -7,13 +7,10 @@
 
         <img mat-card-image [src]="mostrarImg(film)" width="30px" alt="Foto Película StarWars"
         onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
-        alt="Imagen de nave no encontrada">
+        alt="Imagen de nave no encontrada" (click)=mostrarInformacion(film)>
 
         <mat-card-content>
-            <h3>{{film.title}}</h3>
-            <p>Número de Película: {{film.episode_id}}</p>
-            <p><strong>Intro</strong></p>
-            <p>{{film.opening_crawl}}</p>
+            <h3>{{film.episode_id}}: {{film.title}}</h3>
         </mat-card-content>
     </mat-card>
 </div>

@@ -7,11 +7,10 @@
 
         <img mat-card-image [src]="mostrarImg(vehicle)"
             onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
-            alt="Foto Personaje StarWars">
+            alt="Foto Personaje StarWars" (click)="mostrarInformacion(vehicle)">
 
         <mat-card-content>
             <h3>{{vehicle.name}}</h3>
-            <p>Modelo: {{vehicle.model}}</p>
         </mat-card-content>
     </mat-card>
 </div>

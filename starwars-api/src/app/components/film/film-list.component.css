@@ -1,0 +1,21 @@
+button {
+    margin: 20px;
+    background-color: yellow;
+  }
+  
+  div {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    float: left;
+    padding-bottom: 20px;
+    padding-left: 50px;
+  }
+  
+  .example-card {
+    max-width: 250px;
+  }
+  
+  .mat-card {
+    background-color: yellow;
+  }

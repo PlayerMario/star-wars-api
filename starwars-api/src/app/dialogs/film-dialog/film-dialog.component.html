@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Episodio: {{filmData.filmInfo.episode_id}}: {{filmData.filmInfo.title}}</h1>
+<div mat-dialog-content style="width: 300px;">
+    <ul>
+        <li>Fecha de estreno: {{filmData.filmInfo.release_date}}.</li>
+        <li>Director: {{filmData.filmInfo.director}}.</li>
+        <li>Producer(s): {{filmData.filmInfo.producer}}.</li>
+        <li>Sinopsis: {{filmData.filmInfo.opening_crawl}}.</li>
+    </ul>
+    <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+</div>

@@ -7,7 +7,7 @@
 
         <img mat-card-image [src]="mostrarImg(nave)"
             onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
-            alt="Imagen de nave no encontrada">
+            alt="Imagen de nave no encontrada" (click)="mostrarInformacion(nave)">
 
         <mat-card-content>
             <h3>{{nave.name}}</h3>

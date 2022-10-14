@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>{{starshipData.starshipInfo.name}}</h1>
+<div mat-dialog-content style="width: 300px;">
+    <ul>
+        <li>Modelo: {{starshipData.starshipInfo.model}}.</li>
+        <li>Fabricante: {{starshipData.starshipInfo.manufacturer}}.</li>
+        <li>Clase: {{starshipData.starshipInfo.starship_class}}.</li>
+        <li>Precio: {{starshipData.starshipInfo.cost_in_credits}} créditos.</li>
+        <li>Velocidad: {{starshipData.starshipInfo.max_atmosphering_speed}}km/h.</li>
+        <li>Clasificación de hiperimpulsor: {{starshipData.starshipInfo.hyperdrive_rating}}.</li>
+        <li>MGLT: {{starshipData.starshipInfo.MGLT}}.</li>
+        <li>Longitud: {{starshipData.starshipInfo.length}}m.</li>
+        <li>Capacidad de carga: {{starshipData.starshipInfo.cargo_capacity}}.</li>
+        <li>Tripulación mínima: {{starshipData.starshipInfo.crew}}.</li>
+        <li>Tripulación máxima: {{starshipData.starshipInfo.passengers}}.</li>
+    </ul>
+    <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { FilmDialogComponent } from 'src/app/dialogs/film-dialog/film-dialog.component';
 import { Film, FilmsResponse } from 'src/app/interfaces/films.interface';
 import { FilmService } from 'src/app/services/films.service';
 
@@ -12,8 +14,9 @@ export class FilmListComponent implements OnInit {
   page = 1;
   filmList: Film[] = [];
   numPages = 0;
+  filmSelec: FilmsResponse | undefined
 
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService,  public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.filmService.getFilmList(this.page).subscribe(resp => {
@@ -40,5 +43,14 @@ export class FilmListComponent implements OnInit {
     })
   }
 
-
+  mostrarInformacion(film: Film) {
+    this.filmService.getFilmInfo(film).subscribe(resp => {
+      this.filmSelec = resp;
+      this.dialog.open(FilmDialogComponent, {
+        data: {
+          filmInfo: this.filmSelec
+        }
+      })
+    })
+  }
 }

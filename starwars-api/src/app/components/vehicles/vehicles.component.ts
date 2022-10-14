@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Vehicle } from 'src/app/interfaces/vehicles.interface';
+import { MatDialog } from '@angular/material/dialog';
+import { VehicleDialogComponent } from 'src/app/dialogs/vehicle-dialog/vehicle-dialog.component';
+import { Vehicle, VehicleResponse } from 'src/app/interfaces/vehicles.interface';
 import { VehiclesService } from 'src/app/services/vehicles.service';
 
 @Component({
@@ -12,8 +14,9 @@ export class VehiclesComponent implements OnInit {
   vehiclesList: Vehicle[] = [];
   page = 1;
   numPages = 0;
+  vehicleSelec: VehicleResponse | undefined
 
-  constructor(private vehicleService: VehiclesService) { }
+  constructor(private vehicleService: VehiclesService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.vehicleService.getVehicle(this.page).subscribe( resp => {
@@ -41,4 +44,14 @@ export class VehiclesComponent implements OnInit {
     })
   }
 
+  mostrarInformacion(vehicle: Vehicle) {
+    this.vehicleService.getVehicleInfo(vehicle).subscribe(resp => {
+      this.vehicleSelec = resp;
+      this.dialog.open(VehicleDialogComponent, {
+        data: {
+          vehicleInfo: this.vehicleSelec
+        }
+      })
+    })
+  }
 }
