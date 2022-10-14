@@ -2,14 +2,12 @@
 <div mat-dialog-content style="width: 300px;">
     <ul>
         <li>Año de nacimiento: {{peopleData.peopleInfo.birth_year}}.</li>
-        <li>Specie: {{peopleData.peopleInfo.species}}.</li>
         <li>Altura: {{peopleData.peopleInfo.height}}cm.</li>
         <li>Peso: {{peopleData.peopleInfo.mass}}kg.</li>
         <li>Género: {{peopleData.peopleInfo.gender}}.</li>
         <li>Color de pelo: {{peopleData.peopleInfo.hair_color}}.</li>
         <li>Color de piel: {{peopleData.peopleInfo.skin_color}}.</li>
         <li>Color de ojos: {{peopleData.peopleInfo.eye_color}}.</li>
-        <li>Origen: {{peopleData.peopleInfo.homeworld}}.</li>
 
         <p><strong>Aparición en películas</strong></p>
         <ul *ngFor="let pelicula of peopleData.peopleInfo.films">
