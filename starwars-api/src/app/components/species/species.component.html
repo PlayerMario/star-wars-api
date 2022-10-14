@@ -2,15 +2,16 @@
 
 <br />
 
-<div *ngFor="let vehicle of vehiclesList">
+<div *ngFor="let specie of specieList">
     <mat-card class="example-card">
 
-        <img mat-card-image [src]="mostrarImg(vehicle)"
+        <img mat-card-image [src]="mostrarImg(specie)"
             onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
-            alt="Foto Vehículo StarWars" (click)="mostrarInformacion(vehicle)">
+            alt="Foto Especie StarWars">
 
         <mat-card-content>
-            <h3>{{vehicle.name}}</h3>
+            <h3>{{specie.name}}</h3>
+            <p>Modelo: {{specie.classification}}</p>
         </mat-card-content>
     </mat-card>
 </div>

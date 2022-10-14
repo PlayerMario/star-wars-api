@@ -2,15 +2,14 @@
 
 <br />
 
-<div *ngFor="let vehicle of vehiclesList">
+<div *ngFor="let planet pf planetList">
     <mat-card class="example-card">
 
-        <img mat-card-image [src]="mostrarImg(vehicle)"
+        <img mat-card-image [src]="mostrarImg(planet)"
             onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
-            alt="Foto Vehículo StarWars" (click)="mostrarInformacion(vehicle)">
-
+            alt="Foto Planeta StarWars">
         <mat-card-content>
-            <h3>{{vehicle.name}}</h3>
+            <h3>{{planet.name}}</h3>
         </mat-card-content>
     </mat-card>
 </div>

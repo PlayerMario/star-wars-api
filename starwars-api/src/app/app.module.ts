@@ -15,6 +15,8 @@ import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import { StarshipsDialogComponent } from './dialogs/starships-dialog/starships-dialog.component';
 import { FilmDialogComponent } from './dialogs/film-dialog/film-dialog.component';
 import { VehicleDialogComponent } from './dialogs/vehicle-dialog/vehicle-dialog.component';
+import { PlanetsComponent } from './components/planets/planets.component';
+import { SpeciesComponent } from './components/species/species.component';
 
 
 @NgModule({
@@ -29,6 +31,9 @@ import { VehicleDialogComponent } from './dialogs/vehicle-dialog/vehicle-dialog.
     StarshipsDialogComponent,
     FilmDialogComponent,
     VehicleDialogComponent,
+    PlanetsComponent,
+    SpeciesComponent
+
   ],
   imports: [
     BrowserModule,
