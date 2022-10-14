@@ -25,6 +25,7 @@ import { PlanetsComponent } from './components/planets/planets.component';
     PagenotfoundComponent,
     VehiclesComponent,
     PlanetsComponent
+
   ],
   imports: [
     BrowserModule,
