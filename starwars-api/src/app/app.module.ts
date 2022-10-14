@@ -13,6 +13,7 @@ import { StarshipsComponent } from './components/starships/starships.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import { PlanetsComponent } from './components/planets/planets.component';
+import { SpeciesComponent } from './components/species/species.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PlanetsComponent } from './components/planets/planets.component';
     StarshipsComponent,
     PagenotfoundComponent,
     VehiclesComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    SpeciesComponent
   ],
   imports: [
     BrowserModule,
