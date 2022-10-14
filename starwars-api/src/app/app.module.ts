@@ -22,7 +22,7 @@ import { VehiclesComponent } from './components/vehicles/vehicles.component';
     PeopleComponent,
     StarshipsComponent,
     PagenotfoundComponent,
-    VehiclesComponent
+    VehiclesComponent,
   ],
   imports: [
     BrowserModule,
