@@ -29,8 +29,8 @@ export class PlanetsComponent implements OnInit {
   }
 
   mostrarImg(planet : Planet) {
-    let idPeople = planet.url.split("/")[5]
-    return `https://starwars-visualguide.com/assets/img/planets/${idPeople}.jpg`
+    let id = planet.url.split("/")[5]
+    return `https://starwars-visualguide.com/assets/img/planets/${id}.jpg`
   }
 
   cambiarPagina(num: number) {
