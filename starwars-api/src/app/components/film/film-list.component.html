@@ -5,7 +5,9 @@
 <div *ngFor="let film of filmList">
     <mat-card class="example-card">
 
-        <img mat-card-image [src]="mostrarImg(film)" width="30px" alt="Foto Película StarWars">
+        <img mat-card-image [src]="mostrarImg(film)" width="30px" alt="Foto Película StarWars"
+        onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
+        alt="Imagen de nave no encontrada">
 
         <mat-card-content>
             <h3>{{film.title}}</h3>
