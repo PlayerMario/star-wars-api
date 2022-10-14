@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Specie } from 'src/app/interfaces/species.interface';
+import { MatDialog } from '@angular/material/dialog';
+import { SpecieDialogComponent } from 'src/app/dialogs/specie-dialog/specie-dialog.component';
+import { Specie, SpecieResponse } from 'src/app/interfaces/species.interface';
 import { SpeciesService } from 'src/app/services/species.service';
 
 @Component({
@@ -8,15 +10,16 @@ import { SpeciesService } from 'src/app/services/species.service';
   styleUrls: ['./species.component.css']
 })
 export class SpeciesComponent implements OnInit {
-  
+
   specieList: Specie[] = [];
   page = 1;
   numPages = 0;
+  specieSelec: SpecieResponse | undefined
 
-  constructor(private specieService: SpeciesService) { }
+  constructor(private specieService: SpeciesService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.specieService.getSpecieList(this.page).subscribe( resp => {
+    this.specieService.getSpecieList(this.page).subscribe(resp => {
       this.specieList = resp.results;
       if (this.numPages == 0) {
         this.numPages = Math.ceil(resp.count / resp.results.length);
@@ -40,8 +43,14 @@ export class SpeciesComponent implements OnInit {
     })
   }
 
-
-
-
-
+  mostrarInformacion(specie: Specie) {
+    this.specieService.getSpecieInfo(specie).subscribe(resp => {
+      this.specieSelec = resp;
+      this.dialog.open(SpecieDialogComponent, {
+        data: {
+          specieInfo: this.specieSelec
+        }
+      })
+    })
+  }
 }

@@ -7,11 +7,10 @@
 
         <img mat-card-image [src]="mostrarImg(personaje)"
             onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
-            alt="Foto Personaje StarWars">
+            alt="Foto Personaje StarWars" (click)="mostrarInformacion(personaje)">
 
         <mat-card-content>
             <h3>{{personaje.name}}</h3>
-            <p>Género: {{personaje.gender}}</p>
             <p><strong>Aparición en películas</strong></p>
             <ul *ngFor="let pelicula of personaje.films">
                 <li>{{mostrarNombrePeliculas(pelicula)}}</li>

@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>{{specieData.specieInfo.name}}</h1>
+<div mat-dialog-content style="width: 300px;">
+    <ul>
+        <li>Tipo: {{specieData.specieInfo.classification}}.</li>
+        <li>Designación: {{specieData.specieInfo.designation}}.</li>
+        <li>Lenguaje: {{specieData.specieInfo.language}}.</li>
+        <li>Promedio de vida: {{specieData.specieInfo.average_lifespan}} años.</li>
+        <li>Promedio de altura: {{specieData.specieInfo.average_height}}cm.</li>
+        <li>Color de pelo: {{specieData.specieInfo.hair_colors}}.</li>
+        <li>Color de piel: {{specieData.specieInfo.skin_colors}}.</li>
+        <li>Color de ojos: {{specieData.specieInfo.eye_colors}}.</li>
+    </ul>
+    <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+</div>

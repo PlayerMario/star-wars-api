@@ -16,7 +16,7 @@ export class FilmListComponent implements OnInit {
   numPages = 0;
   filmSelec: FilmsResponse | undefined
 
-  constructor(private filmService: FilmService,  public dialog: MatDialog) { }
+  constructor(private filmService: FilmService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.filmService.getFilmList(this.page).subscribe(resp => {

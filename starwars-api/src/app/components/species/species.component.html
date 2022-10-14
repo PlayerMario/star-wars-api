@@ -7,11 +7,10 @@
 
         <img mat-card-image [src]="mostrarImg(specie)"
             onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
-            alt="Foto Especie StarWars">
+            alt="Foto Especie StarWars" (click)="mostrarInformacion(specie)">
 
         <mat-card-content>
             <h3>{{specie.name}}</h3>
-            <p>Modelo: {{specie.classification}}</p>
         </mat-card-content>
     </mat-card>
 </div>

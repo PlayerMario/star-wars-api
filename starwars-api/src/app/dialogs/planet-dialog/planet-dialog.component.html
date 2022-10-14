@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>{{planetData.planetInfo.name}}</h1>
+<div mat-dialog-content style="width: 300px;">
+    <ul>
+        <li>Población: {{planetData.planetInfo.population}} habitantes.</li>
+        <li>Periodo de rotación: {{planetData.planetInfo.rotation_period}} días.</li>
+        <li>Periodo de órbita: {{planetData.planetInfo.orbital_period}} días.</li>
+        <li>Diámetro: {{planetData.planetInfo.diameter}}km.</li>
+        <li>Gravity: {{planetData.planetInfo.gravity}}.</li>
+        <li>Terreo: {{planetData.planetInfo.terrain}}.</li>
+        <li>Superficie de agua: {{planetData.planetInfo.surface_water}}%.</li>
+        <li>Clima: {{planetData.planetInfo.climate}}.</li>
+    </ul>
+    <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+</div>

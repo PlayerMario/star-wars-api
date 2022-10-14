@@ -17,6 +17,9 @@ import { FilmDialogComponent } from './dialogs/film-dialog/film-dialog.component
 import { VehicleDialogComponent } from './dialogs/vehicle-dialog/vehicle-dialog.component';
 import { PlanetsComponent } from './components/planets/planets.component';
 import { SpeciesComponent } from './components/species/species.component';
+import { PlanetDialogComponent } from './dialogs/planet-dialog/planet-dialog.component';
+import { SpecieDialogComponent } from './dialogs/specie-dialog/specie-dialog.component';
+import { PeopleDialogComponent } from './dialogs/people-dialog/people-dialog.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { SpeciesComponent } from './components/species/species.component';
     FilmDialogComponent,
     VehicleDialogComponent,
     PlanetsComponent,
-    SpeciesComponent
+    SpeciesComponent,
+    PlanetDialogComponent,
+    SpecieDialogComponent,
+    PeopleDialogComponent
 
   ],
   imports: [

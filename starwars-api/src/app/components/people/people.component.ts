@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { People } from 'src/app/interfaces/people.interface';
+import { People, PeopleResponse } from 'src/app/interfaces/people.interface';
 import { Film } from 'src/app/interfaces/films.interface';
 import { FilmService } from 'src/app/services/films.service';
 import { PeopleService } from 'src/app/services/people.service';
+import { MatDialog } from '@angular/material/dialog';
+import { PeopleDialogComponent } from 'src/app/dialogs/people-dialog/people-dialog.component';
 
 @Component({
   selector: 'app-people',
@@ -15,8 +17,9 @@ export class PeopleComponent implements OnInit {
   listadoPersonajes: People[] = [];
   listadoPeliculas: Film[] = [];
   numPages = 0;
+  peopleSelec: PeopleResponse | undefined
 
-  constructor(private peopleService: PeopleService, private filmService: FilmService) { }
+  constructor(private peopleService: PeopleService, private filmService: FilmService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.peopleService.getPeopleList(this.page).subscribe(resp => {
@@ -53,6 +56,17 @@ export class PeopleComponent implements OnInit {
     this.page = num;
     this.peopleService.getPeopleList(this.page).subscribe(resp => {
       this.listadoPersonajes = resp.results;
+    })
+  }
+
+  mostrarInformacion(people: People) {
+    this.peopleService.getPeopleInfo(people).subscribe(resp => {
+      this.peopleSelec = resp;
+      this.dialog.open(PeopleDialogComponent, {
+        data: {
+          peopleInfo: this.peopleSelec
+        }
+      })
     })
   }
 }
