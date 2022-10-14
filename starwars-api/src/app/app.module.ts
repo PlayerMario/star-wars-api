@@ -27,6 +27,7 @@ import { SpeciesComponent } from './components/species/species.component';
     VehiclesComponent,
     PlanetsComponent,
     SpeciesComponent
+
   ],
   imports: [
     BrowserModule,
