@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { People } from 'src/app/interfaces/people.interface';
-import { Film } from 'src/app/interfaces/film.interface';
-import { FilmService } from 'src/app/services/film.service';
+import { Film } from 'src/app/interfaces/films.interface';
+import { FilmService } from 'src/app/services/films.service';
 import { PeopleService } from 'src/app/services/people.service';
 
 @Component({
@@ -26,7 +26,7 @@ export class PeopleComponent implements OnInit {
       }
     });
 
-    this.filmService.getFilm().subscribe(resp => {
+    this.filmService.getFilms().subscribe(resp => {
       this.listadoPeliculas = resp.results;
     });
   }

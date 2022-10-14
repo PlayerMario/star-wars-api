@@ -6,16 +6,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilmListComponent } from './components/film/film-list.component';
 import { PortadaComponent } from './components/portada/portada.component';
 import { PeopleComponent } from './components/people/people.component';
 import { StarshipsComponent } from './components/starships/starships.component';
+import { PagenotfoundComponent } from './pnf/pagenotfound/pagenotfound.component';
+import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    FilmListComponent,
     PortadaComponent,
     PeopleComponent,
-    StarshipsComponent
+    StarshipsComponent,
+    PagenotfoundComponent,
+    VehiclesComponent
   ],
   imports: [
     BrowserModule,
