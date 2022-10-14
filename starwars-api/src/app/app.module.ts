@@ -12,6 +12,7 @@ import { PeopleComponent } from './components/people/people.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
+import { PlanetsComponent } from './components/planets/planets.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { VehiclesComponent } from './components/vehicles/vehicles.component';
     PeopleComponent,
     StarshipsComponent,
     PagenotfoundComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    PlanetsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+<button *ngFor="let item of counter(); let i = index" mat-raised-button (click)="cambiarPagina(i+1)">{{i+1}}</button>
+
+<br />
+
+<div *ngFor="let planet pf planetList">
+    <mat-card class="example-card">
+
+        <img mat-card-image [src]="mostrarImg(planet)"
+            onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" width="30px"
+            alt="Foto Planeta StarWars">
+        <mat-card-content>
+            <h3>{{planet.name}}</h3>
+        </mat-card-content>
+    </mat-card>
+</div>
